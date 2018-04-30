@@ -275,7 +275,11 @@ namespace Transfers {
                     Transfer found;
                     store.get (iter, 0, out found);
                     if (transfer == found) {
+#if VALA_0_36                                
                         store.remove (ref iter);
+#else
+                        store.remove (iter);
+#endif
                         break;
                     }
                 } while (store.iter_next (ref iter));

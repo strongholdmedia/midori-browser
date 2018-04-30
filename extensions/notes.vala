@@ -116,7 +116,11 @@ namespace ClipNotes {
                     if (current_note == note) {
                         current_note = null;
                     }
+#if VALA_0_36                                
                     notes_list_store.remove (ref iter);
+#else
+                    notes_list_store.remove (iter);
+#endif
                     break;
                 }
             } while (notes_list_store.iter_next (ref iter));

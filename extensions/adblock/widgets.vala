@@ -227,7 +227,11 @@ namespace Adblock {
                             liststore.get (iter, 0, out sub);
                             if (sub.mutable) {
                                 config.remove (sub);
+#if VALA_0_36                                
                                 liststore.remove (ref iter);
+#else
+                                liststore.remove (iter);
+#endif
                                 return true;
                             }
                         }
