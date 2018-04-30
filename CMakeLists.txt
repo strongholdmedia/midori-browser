@@ -275,7 +275,7 @@ set(LIBMIDORI "${CMAKE_PROJECT_NAME}-core")
 add_custom_target (uninstall
     COMMAND "xargs" "rm" "-v" "<" "install_manifest.txt")
 
-install(FILES AUTHORS COPYING ChangeLog EXPAT README DESTINATION ${CMAKE_INSTALL_DOCDIR})
+install(FILES AUTHORS COPYING ChangeLog EXPAT README.md DESTINATION ${CMAKE_INSTALL_DOCDIR})
 
 add_subdirectory (midori)
 add_subdirectory (extensions)
