@@ -275,7 +275,7 @@ namespace Transfers {
                     Transfer found;
                     store.get (iter, 0, out found);
                     if (transfer == found) {
-                        store.remove (iter);
+                        store.remove (ref iter);
                         break;
                     }
                 } while (store.iter_next (ref iter));
